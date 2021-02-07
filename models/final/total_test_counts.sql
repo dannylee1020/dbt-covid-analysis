@@ -10,12 +10,10 @@ temp2 as(
     case
       when (negative_test_count is null or positive_test_count is null) and totalTestsViral is not null then totalTestsViral
       when totalTestsViral is null then total_pcr_specimen_test
-    --   else totalTestsViral
     end as pcr_specimens_test_count,
     case
       when negative_antibody_test_count is null or positive_antibody_test_count is null then totalTestsAntibody
       when totalTestsAntibody is null then total_antibody_test_count
-    --   else totalTestsAntibody
     end as antibody_test_count,
     totalTestsAntigen as antigen_test_count
   from temp1
@@ -25,9 +23,6 @@ temp2 as(
 temp3 as(
   select
     state,
-    -- sum(coalesce(pcr_specimens_test_count, 0)) as total_pcr_specimens_test_count,
-    -- sum(coalesce(antibody_test_count, 0)) as total_antibody_test_count,
-    -- sum(coalesce(antigen_test_count,0)) as total_antigen_test_count,
     sum(coalesce(pcr_specimens_test_count, 0)) + sum(coalesce(antibody_test_count, 0)) + sum(coalesce(antigen_test_count,0)) as total_test_count
   from temp2
   group by 1
