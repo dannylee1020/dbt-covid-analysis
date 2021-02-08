@@ -6,7 +6,7 @@ This project aims to answer three questions that would help understand the curre
 2. The 7-day rolling average number of new cases per day rolling over the last 30 days
 3. The 10 states with the highest tests positivity rate for tests performed in the last 30 days. 
 <br>
-The original data is loaded into BigQuery and dbt is used to model the data. Documentations on both staging and final data models are available. The whole dbt workflow for this project can be seen by running `dbt docs serve` from the root directory
+The original data is loaded into BigQuery and dbt is used to model the data. Documentations on both staging and final data models are available. The whole dbt workflow for this project can be seen by running ``dbt docs serve`` from the root directory
 
 ## About the Data
 The data is collected and published through the [COVID Tracking Project](https://covidtracking.com/). Since each state has different method for collecting and caculating data, and some data points are not reported, the results of these analyses are at best an **estimate** and may differ from the actual number. However, it is suffice to give a sense of the current situation with COVID-19 throughout the country. For more information about data definitions, refer to [this page](https://covidtracking.com/about-data/data-definitions#pcr-tests)
