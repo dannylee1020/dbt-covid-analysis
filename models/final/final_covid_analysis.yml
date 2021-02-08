@@ -1,0 +1,17 @@
+version: 2
+
+models:
+    - name: new_cases_rolling_average
+      description: final data for rolling averages of daily new cases
+      columns:
+        - name: seven_day_rolling_average
+          description: average number of new cases in the past seven days
+
+        - name: seven_day_rolling_average_on_rolling_thirty_days
+          description: average of seven day rolling average over the last 30 days
+    
+    - name: state_positivity_rate
+      description: final data for positivity rate of each state
+      columns:
+        - name: positivity_rate
+          description: positivity rate defined as (# of positive cases from both PCR and antigen) / (total number of tests) 
