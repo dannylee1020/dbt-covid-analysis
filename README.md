@@ -8,8 +8,12 @@ This project aims to answer three questions that would help understand the curre
 <br>
 The original data is loaded into BigQuery and dbt is used to model the data. 
 
+Documentations on both staging and final data models are available. The whole dbt workflow for this project can be seen by running `dbt docs serve` from the root directory
+
 ## About the Data
-The data is collected and published through the [COVID Tracking Project](https://covidtracking.com/). Since each state has different method for collecting and caculating data, and some data points are not reported, the results of these analyses are at best an **estimate** and may differ from the actual number. However, it is suffice to give a sense of the current situation with COVID-19 throughout the country. 
+The data is collected and published through the [COVID Tracking Project](https://covidtracking.com/). Since each state has different method for collecting and caculating data, and some data points are not reported, the results of these analyses are at best an **estimate** and may differ from the actual number. However, it is suffice to give a sense of the current situation with COVID-19 throughout the country. For more information about data definitions, refer to [this page](https://covidtracking.com/about-data/data-definitions#pcr-tests)
+
+
 
 ## Model Overview
 all data models used for this project can be found under the ``models`` directory. There are two staging models under ``models/staging`` and three final data models for the questions under ``models/final``
@@ -56,8 +60,6 @@ Note that number of positive cases are missing for many states, so this order is
 | SC    | 0.12283744768922995 |
 | MO    | 0.12153807488026848 |
 | TN    | 0.11486967464495083 |
-
-
 
 
 
