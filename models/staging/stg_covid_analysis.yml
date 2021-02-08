@@ -1,0 +1,20 @@
+version: 2
+
+models:
+    - name: stg_tests_count
+      description: staged test data from the COVID tracking project data
+      columns:
+        - name: totalTestsViral
+          description: total number of PCR or specimens tested as reported by the state
+
+        - name: totalTestsAntibody
+          description: total number of completed antibody tests as reported by the state
+        
+        - name: totalTestsAntigen
+          description: total number of completed antigen tests as reported by the state
+
+    - name: stg_new_cases
+      description: staged positive cases data from the COVID tracking project data
+      columns:
+        - name: positiveIncrease
+          description: the daily increase in positive cases, which measures cases (confirmed + probable)
